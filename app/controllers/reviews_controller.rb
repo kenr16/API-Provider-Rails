@@ -3,8 +3,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
-
+    place = Place.find(params[:place_id])
+    @reviews = place.reviews
     render json: @reviews
   end
 

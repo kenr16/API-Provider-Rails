@@ -20,7 +20,7 @@ class Seed
 
   def generate_reviews
     Review.destroy_all
-    100.times do |i|
+    60.times do |i|
       review = Review.create!(
         author: Faker::LordOfTheRings.character,
         content: Faker::Lorem.sentence(3),
